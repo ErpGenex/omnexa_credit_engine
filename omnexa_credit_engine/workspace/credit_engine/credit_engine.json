@@ -1,0 +1,466 @@
+{
+ "charts": [
+  {
+   "chart_name": "CreditEngin · Credit Decision Case Trend",
+   "label": "Credit Decision Case Trend"
+  },
+  {
+   "chart_name": "CreditEngin · Credit Connector Request Trend",
+   "label": "Credit Connector Request Trend"
+  },
+  {
+   "chart_name": "CreditEngin · Credit Decision Case Vol",
+   "label": "Credit Decision Case Vol"
+  },
+  {
+   "chart_name": "CreditEngin · Decision funnel Bar",
+   "label": "Decision funnel Bar"
+  },
+  {
+   "chart_name": "CreditEngin · Risk grades Pie",
+   "label": "Risk grades Pie"
+  },
+  {
+   "chart_name": "CreditEngin · Connector outcomes Perc",
+   "label": "Connector outcomes Perc"
+  },
+  {
+   "chart_name": "CreditEngin · Credit Rule Profile Mix",
+   "label": "Credit Rule Profile Mix"
+  },
+  {
+   "chart_name": "CreditEngin · Credit Scorecard Mix",
+   "label": "Credit Scorecard Mix"
+  }
+ ],
+ "content": "[{\"id\": \"credit-engine-h\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Credit Engine</b></span>\", \"col\": 12}}, {\"id\": \"credit-engine-nc0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Decision Cases\", \"col\": 4}}, {\"id\": \"credit-engine-nc1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Rule Profiles\", \"col\": 4}}, {\"id\": \"credit-engine-nc2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Scorecards\", \"col\": 4}}, {\"id\": \"credit-engine-nc3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Strategies\", \"col\": 4}}, {\"id\": \"credit-engine-nc4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Overrides\", \"col\": 4}}, {\"id\": \"credit-engine-nc5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Connectors\", \"col\": 4}}, {\"id\": \"credit-engine-ch0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Decision Case Trend\", \"col\": 4}}, {\"id\": \"credit-engine-ch1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Connector Request Trend\", \"col\": 4}}, {\"id\": \"credit-engine-ch2\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Decision Case Vol\", \"col\": 4}}, {\"id\": \"credit-engine-ch3\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Decision funnel Bar\", \"col\": 4}}, {\"id\": \"credit-engine-ch4\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Risk grades Pie\", \"col\": 4}}, {\"id\": \"credit-engine-ch5\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Connector outcomes Perc\", \"col\": 4}}, {\"id\": \"credit-engine-ch6\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Rule Profile Mix\", \"col\": 4}}, {\"id\": \"credit-engine-ch7\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Scorecard Mix\", \"col\": 4}}, {\"id\": \"credit-engine-ops\", \"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"id\": \"credit-engine-sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rule Profiles\", \"col\": 3}}, {\"id\": \"credit-engine-sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Decision Cases\", \"col\": 3}}, {\"id\": \"credit-engine-sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Scorecards\", \"col\": 3}}, {\"id\": \"credit-engine-sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Strategy Routes\", \"col\": 3}}, {\"id\": \"credit-engine-sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Decision Overrides\", \"col\": 3}}, {\"id\": \"credit-engine-sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Connector Requests\", \"col\": 3}}, {\"id\": \"credit-engine-sc6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Decision SLA Monitor\", \"col\": 3}}, {\"id\": \"credit-engine-sc7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Governance Overview\", \"col\": 3}}]",
+ "creation": "2026-04-17 15:51:33.208580",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "workflow",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Credit Engine",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer & KYC",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "user",
+   "is_query_report": 0,
+   "label": "Customer Profile",
+   "link_count": 0,
+   "link_to": "Customer Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "users",
+   "is_query_report": 0,
+   "label": "Contact",
+   "link_count": 0,
+   "link_to": "Contact",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "map-pin",
+   "is_query_report": 0,
+   "label": "Address",
+   "link_count": 0,
+   "link_to": "Address",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Origination & Product Setup",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Fiscal Year",
+   "link_count": 0,
+   "link_to": "Fiscal Year",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "globe",
+   "is_query_report": 0,
+   "label": "Currency Exchange Rate",
+   "link_count": 0,
+   "link_to": "Currency Exchange Rate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "credit-card",
+   "is_query_report": 0,
+   "label": "Mode of Payment",
+   "link_count": 0,
+   "link_to": "Mode of Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contracting, Disbursement & Servicing",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "file-text",
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "dollar-sign",
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "book-open",
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "briefcase",
+   "is_query_report": 0,
+   "label": "Bank Account",
+   "link_count": 0,
+   "link_to": "Bank Account",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "target",
+   "is_query_report": 0,
+   "label": "Cost Center",
+   "link_count": 0,
+   "link_to": "Cost Center",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk, Governance & Compliance",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "book",
+   "is_query_report": 1,
+   "label": "General Ledger",
+   "link_count": 0,
+   "link_to": "General Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "list",
+   "is_query_report": 1,
+   "label": "Trial Balance",
+   "link_count": 0,
+   "link_to": "Trial Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "shield",
+   "is_query_report": 0,
+   "label": "Policy Versions",
+   "link_count": 0,
+   "link_to": "Credit Policy Version",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "activity",
+   "is_query_report": 0,
+   "label": "Audit Snapshots",
+   "link_count": 0,
+   "link_to": "Credit Audit Snapshot",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "sliders",
+   "is_query_report": 0,
+   "label": "Rule Profiles",
+   "link_count": 0,
+   "link_to": "Credit Rule Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "check-square",
+   "is_query_report": 0,
+   "label": "Decision Cases",
+   "link_count": 0,
+   "link_to": "Credit Decision Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "clock",
+   "is_query_report": 1,
+   "label": "Decision SLA Monitor",
+   "link_count": 0,
+   "link_to": "Decision SLA Monitor",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "pie-chart",
+   "is_query_report": 1,
+   "label": "Decision Outcome Distribution",
+   "link_count": 0,
+   "link_to": "Decision Outcome Distribution",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "hash",
+   "is_query_report": 1,
+   "label": "Reason Code Distribution",
+   "link_count": 0,
+   "link_to": "Reason Code Distribution",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "grid",
+   "is_query_report": 1,
+   "label": "Country Product Segment Heatmap",
+   "link_count": 0,
+   "link_to": "Country Product Segment Heatmap",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Analytics Reports",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "activity",
+   "is_query_report": 1,
+   "label": "Decision SLA Monitor",
+   "link_count": 0,
+   "link_to": "Decision SLA Monitor",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "pie-chart",
+   "is_query_report": 1,
+   "label": "Decision Outcome Distribution",
+   "link_count": 0,
+   "link_to": "Decision Outcome Distribution",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "bookmark",
+   "is_query_report": 1,
+   "label": "Reason Code Distribution",
+   "link_count": 0,
+   "link_to": "Reason Code Distribution",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "grid",
+   "is_query_report": 1,
+   "label": "Country Product Heatmap",
+   "link_count": 0,
+   "link_to": "Country Product Segment Heatmap",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-17 23:45:44.665396",
+ "modified_by": "Administrator",
+ "module": "Omnexa Credit Engine",
+ "name": "Credit Engine",
+ "number_cards": [
+  {
+   "label": "Decision Cases",
+   "number_card_name": "Decision Cases"
+  },
+  {
+   "label": "Active Rule Profiles",
+   "number_card_name": "Active Rule Profiles"
+  },
+  {
+   "label": "Active Scorecards",
+   "number_card_name": "Active Scorecards"
+  },
+  {
+   "label": "Active Strategies",
+   "number_card_name": "Active Strategies"
+  },
+  {
+   "label": "Pending Overrides",
+   "number_card_name": "Pending Overrides"
+  },
+  {
+   "label": "Pending Connectors",
+   "number_card_name": "Pending Connectors"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Finance Group",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Rule Profiles",
+   "link_to": "Credit Rule Profile",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Decision Cases",
+   "link_to": "Credit Decision Case",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Scorecards",
+   "link_to": "Credit Scorecard",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Strategy Routes",
+   "link_to": "Credit Strategy Route",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Decision Overrides",
+   "link_to": "Credit Decision Override",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Connector Requests",
+   "link_to": "Credit Connector Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "",
+   "label": "Decision SLA Monitor",
+   "link_to": "Decision SLA Monitor",
+   "report_ref_doctype": "Credit Decision Case",
+   "type": "Report"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "",
+   "label": "Governance Overview",
+   "link_to": "Governance Overview",
+   "report_ref_doctype": "Finance Policy Version",
+   "type": "Report"
+  }
+ ],
+ "title": "Credit Engine"
+}

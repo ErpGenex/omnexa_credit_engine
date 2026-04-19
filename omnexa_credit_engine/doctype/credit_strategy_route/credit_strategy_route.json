@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:strategy_code",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "strategy_code",
+  "title",
+  "country_code",
+  "product_code",
+  "champion_tree_json",
+  "challenger_tree_json",
+  "traffic_split_percent",
+  "explainability_store_json",
+  "status"
+ ],
+ "fields": [
+  {"fieldname": "strategy_code", "fieldtype": "Data", "label": "Strategy Code", "reqd": 1, "unique": 1, "in_list_view": 1},
+  {"fieldname": "title", "fieldtype": "Data", "label": "Title", "reqd": 1},
+  {"fieldname": "country_code", "fieldtype": "Data", "label": "Country Code", "default": "INTL"},
+  {"fieldname": "product_code", "fieldtype": "Data", "label": "Product Code", "default": "GENERIC"},
+  {"fieldname": "champion_tree_json", "fieldtype": "Long Text", "label": "Champion Strategy Tree JSON", "reqd": 1},
+  {"fieldname": "challenger_tree_json", "fieldtype": "Long Text", "label": "Challenger Strategy Tree JSON", "reqd": 1},
+  {"fieldname": "traffic_split_percent", "fieldtype": "Percent", "label": "Challenger Traffic %", "default": "10"},
+  {"fieldname": "explainability_store_json", "fieldtype": "Long Text", "label": "Explainability Store JSON"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "DRAFT\nACTIVE\nRETIRED", "default": "DRAFT", "in_list_view": 1}
+ ],
+ "index_web_pages_for_search": 1,
+ "module": "Omnexa Credit Engine",
+ "name": "Credit Strategy Route",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
