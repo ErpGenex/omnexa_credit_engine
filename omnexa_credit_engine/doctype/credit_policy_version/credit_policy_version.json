@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "policy_name",
   "policy_version",
   "status",
@@ -16,9 +17,16 @@
   "approved_at",
   "rejected_at",
   "rejection_reason",
-  "payload_json"
+  "payload_json",
+  "control_section",
+  "policy_reference"
  ],
  "fields": [
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Identity"
+  },
   {
    "fieldname": "policy_name",
    "fieldtype": "Data",
@@ -89,6 +97,16 @@
    "fieldtype": "Long Text",
    "label": "Payload JSON",
    "reqd": 1
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Governance"
+  },
+  {
+   "fieldname": "policy_reference",
+   "fieldtype": "Data",
+   "label": "Policy Reference"
   }
  ],
  "index_web_pages_for_search": 1,

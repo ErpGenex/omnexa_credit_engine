@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "decision_case",
   "original_decision",
   "proposed_decision",
@@ -14,19 +15,87 @@
   "maker",
   "maker_on",
   "checker",
-  "checker_on"
+  "checker_on",
+  "control_section",
+  "override_reference"
  ],
  "fields": [
-  {"fieldname": "decision_case", "fieldtype": "Link", "label": "Decision Case", "options": "Credit Decision Case", "reqd": 1, "in_list_view": 1},
-  {"fieldname": "original_decision", "fieldtype": "Data", "label": "Original Decision", "reqd": 1},
-  {"fieldname": "proposed_decision", "fieldtype": "Data", "label": "Proposed Decision", "reqd": 1},
-  {"fieldname": "override_reason", "fieldtype": "Small Text", "label": "Override Reason", "reqd": 1},
-  {"fieldname": "workflow_status", "fieldtype": "Select", "label": "Workflow Status", "options": "PENDING\nAPPROVED\nREJECTED", "default": "PENDING", "in_list_view": 1},
-  {"fieldname": "sla_due", "fieldtype": "Datetime", "label": "SLA Due"},
-  {"fieldname": "maker", "fieldtype": "Link", "label": "Maker", "options": "User"},
-  {"fieldname": "maker_on", "fieldtype": "Datetime", "label": "Maker On"},
-  {"fieldname": "checker", "fieldtype": "Link", "label": "Checker", "options": "User"},
-  {"fieldname": "checker_on", "fieldtype": "Datetime", "label": "Checker On"}
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Decision Override Identity"
+  },
+  {
+   "fieldname": "decision_case",
+   "fieldtype": "Link",
+   "label": "Decision Case",
+   "options": "Credit Decision Case",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "original_decision",
+   "fieldtype": "Data",
+   "label": "Original Decision",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proposed_decision",
+   "fieldtype": "Data",
+   "label": "Proposed Decision",
+   "reqd": 1
+  },
+  {
+   "fieldname": "override_reason",
+   "fieldtype": "Small Text",
+   "label": "Override Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workflow_status",
+   "fieldtype": "Select",
+   "label": "Workflow Status",
+   "options": "PENDING\nAPPROVED\nREJECTED",
+   "default": "PENDING",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sla_due",
+   "fieldtype": "Datetime",
+   "label": "SLA Due"
+  },
+  {
+   "fieldname": "maker",
+   "fieldtype": "Link",
+   "label": "Maker",
+   "options": "User"
+  },
+  {
+   "fieldname": "maker_on",
+   "fieldtype": "Datetime",
+   "label": "Maker On"
+  },
+  {
+   "fieldname": "checker",
+   "fieldtype": "Link",
+   "label": "Checker",
+   "options": "User"
+  },
+  {
+   "fieldname": "checker_on",
+   "fieldtype": "Datetime",
+   "label": "Checker On"
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "override_reference",
+   "fieldtype": "Data",
+   "label": "Override Reference"
+  }
  ],
  "index_web_pages_for_search": 1,
  "module": "Omnexa Credit Engine",

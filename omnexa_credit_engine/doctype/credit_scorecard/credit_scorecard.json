@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "scorecard_code",
   "title",
   "country_code",
@@ -17,22 +18,110 @@
   "status_submitted_by",
   "status_submitted_on",
   "status_approved_by",
-  "status_approved_on"
+  "status_approved_on",
+  "control_section",
+  "scorecard_owner"
  ],
  "fields": [
-  {"fieldname": "scorecard_code", "fieldtype": "Data", "label": "Scorecard Code", "reqd": 1, "unique": 1, "in_list_view": 1},
-  {"fieldname": "title", "fieldtype": "Data", "label": "Title", "reqd": 1},
-  {"fieldname": "country_code", "fieldtype": "Data", "label": "Country Code", "default": "INTL", "in_list_view": 1},
-  {"fieldname": "product_code", "fieldtype": "Data", "label": "Product Code", "default": "GENERIC", "in_list_view": 1},
-  {"fieldname": "channel", "fieldtype": "Data", "label": "Channel", "default": "OMNI"},
-  {"fieldname": "scorecard_version", "fieldtype": "Data", "label": "Scorecard Version", "reqd": 1, "in_list_view": 1},
-  {"fieldname": "definition_json", "fieldtype": "Long Text", "label": "Definition JSON", "reqd": 1},
-  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "DRAFT\nACTIVE\nRETIRED", "default": "DRAFT", "in_list_view": 1},
-  {"fieldname": "pending_status", "fieldtype": "Select", "label": "Pending Status", "options": "\nDRAFT\nACTIVE\nRETIRED"},
-  {"fieldname": "status_submitted_by", "fieldtype": "Link", "label": "Submitted By", "options": "User"},
-  {"fieldname": "status_submitted_on", "fieldtype": "Datetime", "label": "Submitted On"},
-  {"fieldname": "status_approved_by", "fieldtype": "Link", "label": "Approved By", "options": "User"},
-  {"fieldname": "status_approved_on", "fieldtype": "Datetime", "label": "Approved On"}
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Scorecard Identity"
+  },
+  {
+   "fieldname": "scorecard_code",
+   "fieldtype": "Data",
+   "label": "Scorecard Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code",
+   "default": "INTL",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "label": "Product Code",
+   "default": "GENERIC",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Data",
+   "label": "Channel",
+   "default": "OMNI"
+  },
+  {
+   "fieldname": "scorecard_version",
+   "fieldtype": "Data",
+   "label": "Scorecard Version",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "definition_json",
+   "fieldtype": "Long Text",
+   "label": "Definition JSON",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "DRAFT\nACTIVE\nRETIRED",
+   "default": "DRAFT",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pending_status",
+   "fieldtype": "Select",
+   "label": "Pending Status",
+   "options": "\nDRAFT\nACTIVE\nRETIRED"
+  },
+  {
+   "fieldname": "status_submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "status_submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted On"
+  },
+  {
+   "fieldname": "status_approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "status_approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On"
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Control"
+  },
+  {
+   "fieldname": "scorecard_owner",
+   "fieldtype": "Link",
+   "label": "Scorecard Owner",
+   "options": "User"
+  }
  ],
  "index_web_pages_for_search": 1,
  "module": "Omnexa Credit Engine",

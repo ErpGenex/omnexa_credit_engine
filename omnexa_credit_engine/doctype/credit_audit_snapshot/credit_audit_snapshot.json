@@ -5,15 +5,23 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "process_name",
   "policy_ref",
   "actor",
   "created_at",
   "snapshot_hash",
   "inputs_json",
-  "outputs_json"
+  "outputs_json",
+  "control_section",
+  "snapshot_reference"
  ],
  "fields": [
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Snapshot Identity"
+  },
   {
    "fieldname": "process_name",
    "fieldtype": "Data",
@@ -57,6 +65,16 @@
    "fieldtype": "Long Text",
    "label": "Outputs JSON",
    "reqd": 1
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Control"
+  },
+  {
+   "fieldname": "snapshot_reference",
+   "fieldtype": "Data",
+   "label": "Snapshot Reference"
   }
  ],
  "index_web_pages_for_search": 1,
