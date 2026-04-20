@@ -1,0 +1,41 @@
+{
+ "allow_roles": [
+  {
+   "role": "Desk User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2026-04-20 00:31:40.201192",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://frappe.io/framework",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-04-20 02:24:44.805559",
+ "modified_by": "Administrator",
+ "module": "Omnexa Credit Engine",
+ "name": "ERPGENEX \u2014 Credit Engine",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "ERPGENEX-WS-credit_engine-01-credit_rule_profile"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_engine-02-credit_decision_case"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_engine-03-credit_scorecard"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_engine-04-credit_strategy_route"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_engine-home"
+  }
+ ],
+ "subtitle": "Guided setup for this workspace.",
+ "success_message": "You are ready to work in Credit Engine.",
+ "title": "ERPGENEX \u00b7 Credit Engine"
+}
