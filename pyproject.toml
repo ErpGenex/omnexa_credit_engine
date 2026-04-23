@@ -1,7 +1,7 @@
 [project]
 name = "omnexa_credit_engine"
 authors = [
-    { name = "Omnexa", email = "dev@omnexa.com"}
+    { name = "ErpGenEx", email = "dev@erpgenex.com"}
 ]
 description = "Shared credit engine services"
 requires-python = ">=3.10"
