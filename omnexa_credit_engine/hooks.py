@@ -1,8 +1,8 @@
 app_name = "omnexa_credit_engine"
 app_title = "ErpGenEx — Credit Engine"
-app_publisher = "Omnexa"
+app_publisher = "ErpGenEx"
 app_description = "Shared credit engine services"
-app_email = "dev@omnexa.com"
+app_email = "dev@erpgenex.com"
 app_license = "mit"
 
 # Apps
