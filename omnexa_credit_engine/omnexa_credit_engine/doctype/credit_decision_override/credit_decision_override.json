@@ -1,0 +1,118 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "hash",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"decision_case",
+		"original_decision",
+		"proposed_decision",
+		"column_break_omnexa_1",
+		"override_reason",
+		"workflow_status",
+		"sla_due",
+		"maker",
+		"column_break_omnexa_2",
+		"maker_on",
+		"checker",
+		"checker_on",
+		"override_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "decision_case",
+			"fieldtype": "Link",
+			"label": "Decision Case",
+			"options": "Credit Decision Case",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "original_decision",
+			"fieldtype": "Data",
+			"label": "Original Decision",
+			"reqd": 1
+		},
+		{
+			"fieldname": "proposed_decision",
+			"fieldtype": "Data",
+			"label": "Proposed Decision",
+			"reqd": 1
+		},
+		{
+			"fieldname": "override_reason",
+			"fieldtype": "Small Text",
+			"label": "Override Reason",
+			"reqd": 1
+		},
+		{
+			"fieldname": "workflow_status",
+			"fieldtype": "Select",
+			"label": "Workflow Status",
+			"options": "PENDING\nAPPROVED\nREJECTED",
+			"default": "PENDING",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "sla_due",
+			"fieldtype": "Datetime",
+			"label": "SLA Due"
+		},
+		{
+			"fieldname": "maker",
+			"fieldtype": "Link",
+			"label": "Maker",
+			"options": "User"
+		},
+		{
+			"fieldname": "maker_on",
+			"fieldtype": "Datetime",
+			"label": "Maker On"
+		},
+		{
+			"fieldname": "checker",
+			"fieldtype": "Link",
+			"label": "Checker",
+			"options": "User"
+		},
+		{
+			"fieldname": "checker_on",
+			"fieldtype": "Datetime",
+			"label": "Checker On"
+		},
+		{
+			"fieldname": "override_reference",
+			"fieldtype": "Data",
+			"label": "Override Reference"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "column_break_omnexa_2",
+			"fieldtype": "Column Break"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"module": "Omnexa Credit Engine",
+	"name": "Credit Decision Override",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"print": 1,
+			"email": 1,
+			"export": 1,
+			"report": 1,
+			"share": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"track_changes": 1
+}
