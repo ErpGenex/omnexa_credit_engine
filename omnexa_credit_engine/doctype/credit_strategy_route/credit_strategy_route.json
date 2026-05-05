@@ -5,11 +5,13 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"strategy_code",
 		"title",
 		"country_code",
 		"product_code",
 		"champion_tree_json",
+		"tab_break_details",
 		"challenger_tree_json",
 		"traffic_split_percent",
 		"explainability_store_json",
@@ -17,6 +19,16 @@
 		"route_reference"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "strategy_code",
 			"fieldtype": "Data",
