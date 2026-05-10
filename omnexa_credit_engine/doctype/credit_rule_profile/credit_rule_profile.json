@@ -5,6 +5,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"profile_name",
 		"status",
 		"country_code",
@@ -12,6 +13,7 @@
 		"column_break_omnexa_1",
 		"customer_segment",
 		"portfolio_name",
+		"tab_break_details",
 		"min_score",
 		"max_dti",
 		"column_break_omnexa_2",
@@ -21,6 +23,16 @@
 		"rule_owner"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "profile_name",
 			"fieldtype": "Data",

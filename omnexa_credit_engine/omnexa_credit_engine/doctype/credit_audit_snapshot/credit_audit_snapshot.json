@@ -5,6 +5,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"process_name",
 		"policy_ref",
 		"actor",
@@ -15,6 +16,11 @@
 		"snapshot_reference"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
 		{
 			"fieldname": "process_name",
 			"fieldtype": "Data",

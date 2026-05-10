@@ -5,6 +5,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"scorecard_code",
 		"title",
 		"country_code",
@@ -13,6 +14,7 @@
 		"channel",
 		"scorecard_version",
 		"definition_json",
+		"tab_break_details",
 		"status",
 		"pending_status",
 		"column_break_omnexa_2",
@@ -23,6 +25,16 @@
 		"scorecard_owner"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "scorecard_code",
 			"fieldtype": "Data",
