@@ -5,12 +5,14 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"decision_case",
 		"original_decision",
 		"proposed_decision",
 		"column_break_omnexa_1",
 		"override_reason",
 		"workflow_status",
+		"tab_break_details",
 		"sla_due",
 		"maker",
 		"column_break_omnexa_2",
@@ -20,6 +22,16 @@
 		"override_reference"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "decision_case",
 			"fieldtype": "Link",

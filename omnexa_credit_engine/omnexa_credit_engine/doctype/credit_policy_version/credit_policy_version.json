@@ -5,6 +5,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"policy_name",
 		"policy_version",
 		"status",
@@ -12,6 +13,7 @@
 		"column_break_omnexa_1",
 		"checker",
 		"rejector",
+		"tab_break_details",
 		"effective_from",
 		"created_at",
 		"column_break_omnexa_2",
@@ -22,6 +24,16 @@
 		"policy_reference"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "policy_name",
 			"fieldtype": "Data",

@@ -5,6 +5,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"connector_kind",
 		"idempotency_key",
 		"external_reference",
@@ -16,6 +17,11 @@
 		"request_owner"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
 		{
 			"fieldname": "connector_kind",
 			"fieldtype": "Select",
