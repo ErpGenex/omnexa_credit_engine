@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 
 import frappe
+from omnexa_core.workspace_link_prune import prune_workspace_stale_links
 
 APP = "omnexa_credit_engine"
 WORKSPACE = "Credit Engine Governance"
@@ -91,4 +92,5 @@ def _ensure_workspace():
 	if not any(c.get("chart_name") == CHART_SNP for c in ws.charts):
 		ws.append("charts", {"chart_name": CHART_SNP, "label": "Snapshots (Last Month)"})
 
+	prune_workspace_stale_links(ws)
 	ws.save(ignore_permissions=True)
