@@ -1,35 +1,30 @@
-from __future__ import annotations
-
-import json
-from collections import Counter
+# Copyright (c) 2026, Omnexa and contributors
+# License: MIT. See license.txt
 
 import frappe
+from frappe import _
+
+from omnexa_core.omnexa_core.report_print.report_query_filters import (
+	get_all_filters,
+	policy_version_filters,
+	prepare_filters,
+	sql_conditions,
+)
+
 
 
 def execute(filters=None):
-	columns = [
+	filters = prepare_filters(filters)
+	filters_dict = get_all_filters(filters, "Credit Decision Case", date_field="creation", company=True, branch=True, extra_links={})
+	data = frappe.get_all(
+		"Credit Decision Case",
+		fields=['reason_codes_json'],
+		filters=filters_dict,
+		limit_page_length=5000,
+	)
+
+	return [
 		{"label": "Reason Code", "fieldname": "reason_code", "fieldtype": "Data", "width": 130},
 		{"label": "Title", "fieldname": "title", "fieldtype": "Data", "width": 220},
 		{"label": "Count", "fieldname": "count", "fieldtype": "Int", "width": 100},
-	]
-
-	rows = frappe.get_all("Credit Decision Case", fields=["reason_codes_json"])
-	counter: Counter[str] = Counter()
-	title_map: dict[str, str] = {}
-	for row in rows:
-		try:
-			reason_codes = json.loads(row.reason_codes_json or "[]")
-		except Exception:
-			reason_codes = []
-		for reason in reason_codes:
-			code = reason.get("code")
-			if not code:
-				continue
-			counter[code] += 1
-			title_map[code] = reason.get("title", "")
-
-	data = [
-		{"reason_code": code, "title": title_map.get(code, ""), "count": count}
-		for code, count in counter.most_common()
-	]
-	return columns, data
+	], data
