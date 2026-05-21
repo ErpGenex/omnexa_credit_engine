@@ -24,7 +24,7 @@ def execute(filters=None):
 	)
 
 	return [
-		{"label": "Reason Code", "fieldname": "reason_code", "fieldtype": "Data", "width": 130},
-		{"label": "Title", "fieldname": "title", "fieldtype": "Data", "width": 220},
-		{"label": "Count", "fieldname": "count", "fieldtype": "Int", "width": 100},
+		{"label": _("Reason Code"), "fieldname": "reason_code", "fieldtype": "Data", "width": 130},
+		{"label": _("Title"), "fieldname": "title", "fieldtype": "Data", "width": 220},
+		{"label": _("Count"), "fieldname": "count", "fieldtype": "Int", "width": 100},
 	], data

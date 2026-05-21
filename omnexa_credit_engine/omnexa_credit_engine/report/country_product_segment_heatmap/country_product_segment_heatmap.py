@@ -15,14 +15,14 @@ from omnexa_core.omnexa_core.report_print.report_query_filters import (
 
 def execute(filters=None):
 	columns = [
-		{"label": "Country", "fieldname": "country_code", "fieldtype": "Data", "width": 100},
-		{"label": "Product", "fieldname": "product_code", "fieldtype": "Data", "width": 140},
-		{"label": "Segment", "fieldname": "customer_segment", "fieldtype": "Data", "width": 140},
-		{"label": "Portfolio", "fieldname": "portfolio_name", "fieldtype": "Data", "width": 140},
-		{"label": "Cases", "fieldname": "cases", "fieldtype": "Int", "width": 90},
-		{"label": "Avg Score", "fieldname": "avg_score", "fieldtype": "Float", "width": 110},
-		{"label": "Avg DTI", "fieldname": "avg_dti", "fieldtype": "Percent", "width": 100},
-		{"label": "Avg LTV", "fieldname": "avg_ltv", "fieldtype": "Percent", "width": 100},
+		{"label": _("Country"), "fieldname": "country_code", "fieldtype": "Data", "width": 100},
+		{"label": _("Product"), "fieldname": "product_code", "fieldtype": "Data", "width": 140},
+		{"label": _("Segment"), "fieldname": "customer_segment", "fieldtype": "Data", "width": 140},
+		{"label": _("Portfolio"), "fieldname": "portfolio_name", "fieldtype": "Data", "width": 140},
+		{"label": _("Cases"), "fieldname": "cases", "fieldtype": "Int", "width": 90},
+		{"label": _("Avg Score"), "fieldname": "avg_score", "fieldtype": "Float", "width": 110},
+		{"label": _("Avg DTI"), "fieldname": "avg_dti", "fieldtype": "Percent", "width": 100},
+		{"label": _("Avg LTV"), "fieldname": "avg_ltv", "fieldtype": "Percent", "width": 100},
 	]
 	filters = prepare_filters(filters)
 	conditions, params = sql_conditions(filters, "Credit Decision Case", date_field="creation", company=True, branch=True)

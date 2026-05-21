@@ -15,13 +15,13 @@ from omnexa_core.omnexa_core.report_print.report_query_filters import (
 
 def execute(filters=None):
 	columns = [
-		{"label": "Country", "fieldname": "country_code", "fieldtype": "Data", "width": 100},
-		{"label": "Product", "fieldname": "product_code", "fieldtype": "Data", "width": 140},
-		{"label": "Segment", "fieldname": "customer_segment", "fieldtype": "Data", "width": 140},
-		{"label": "Approve", "fieldname": "approve_count", "fieldtype": "Int", "width": 90},
-		{"label": "Review", "fieldname": "review_count", "fieldtype": "Int", "width": 90},
-		{"label": "Decline", "fieldname": "decline_count", "fieldtype": "Int", "width": 90},
-		{"label": "Total", "fieldname": "total_count", "fieldtype": "Int", "width": 90},
+		{"label": _("Country"), "fieldname": "country_code", "fieldtype": "Data", "width": 100},
+		{"label": _("Product"), "fieldname": "product_code", "fieldtype": "Data", "width": 140},
+		{"label": _("Segment"), "fieldname": "customer_segment", "fieldtype": "Data", "width": 140},
+		{"label": _("Approve"), "fieldname": "approve_count", "fieldtype": "Int", "width": 90},
+		{"label": _("Review"), "fieldname": "review_count", "fieldtype": "Int", "width": 90},
+		{"label": _("Decline"), "fieldname": "decline_count", "fieldtype": "Int", "width": 90},
+		{"label": _("Total"), "fieldname": "total_count", "fieldtype": "Int", "width": 90},
 	]
 	filters = prepare_filters(filters)
 	conditions, params = sql_conditions(filters, "Credit Decision Case", date_field="creation", company=True, branch=True)
