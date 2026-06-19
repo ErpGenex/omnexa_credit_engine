@@ -10,16 +10,16 @@ app_license = "mit"
 
 required_apps = ["omnexa_core"]
 
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "omnexa_credit_engine",
-# 		"logo": "/assets/omnexa_credit_engine/logo.png",
-# 		"title": "Omnexa Credit Engine",
-# 		"route": "/omnexa_credit_engine",
-# 		"has_permission": "omnexa_credit_engine.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "omnexa_credit_engine",
+		"logo": "/assets/omnexa_credit_engine/logo.png",
+		"title": "CreditPulse",
+		"route": "/app/credit_engine",
+		"has_permission": "omnexa_core.omnexa_core.finance_demo.finance_app_permission.has_app_permission",
+	}
+]
+
 
 # Includes in <head>
 # ------------------
