@@ -1,7 +1,12 @@
 frappe.pages["ce-executive-dashboard"].on_page_load = function (wrapper) {
-	const page = frappe.ui.make_app_page({ parent: wrapper, title: __("ce-executive-dashboard"), single_column: true });
-	frappe.call({ method: "omnexa_credit_engine.ce_global_benchmark.get_global_ce_score", callback(r) {
-		const s = r.message || {};
-		$(page.body).html(`<div class="p-4"><h4>Score: <b>${s.weighted_score||0}</b></h4><p>${s.gaps_closed||0} / ${s.gaps_total||48}</p></div>`);
-	}});
+	function boot() {
+		if (window.omnexa_finance && omnexa_finance.bootPortalPage) {
+			omnexa_finance.bootPortalPage(wrapper, "ce-executive-dashboard");
+			return;
+		}
+		frappe.require("/assets/omnexa_core/js/finance_portal_page_boot.js", function () {
+			omnexa_finance.bootPortalPage(wrapper, "ce-executive-dashboard");
+		});
+	}
+	boot();
 };
