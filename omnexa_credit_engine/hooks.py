@@ -15,7 +15,7 @@ add_to_apps_screen = [
 		"name": "omnexa_credit_engine",
 		"logo": "/assets/omnexa_credit_engine/logo.png",
 		"title": "CreditPulse",
-		"route": "/app/credit_engine",
+		"route": "/app/ce-servicing-portal",
 		"has_permission": "omnexa_core.omnexa_core.finance_demo.finance_app_permission.has_app_permission",
 	}
 ]
