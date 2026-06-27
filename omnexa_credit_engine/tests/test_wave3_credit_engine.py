@@ -5,6 +5,10 @@ import json
 from frappe.tests.utils import FrappeTestCase
 import frappe
 
+from omnexa_core.tests.test_helpers import suppress_workflow_attach_print
+
+suppress_workflow_attach_print()
+
 from omnexa_credit_engine.api import (
 	approve_credit_decision_override,
 	approve_credit_scorecard_status_change,

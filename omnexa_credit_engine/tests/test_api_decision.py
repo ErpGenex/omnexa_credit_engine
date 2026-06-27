@@ -2,6 +2,10 @@ from frappe.tests.utils import FrappeTestCase
 
 import frappe
 
+from omnexa_core.tests.test_helpers import suppress_workflow_attach_print
+
+suppress_workflow_attach_print()
+
 from omnexa_credit_engine.api import evaluate_decision, evaluate_decision_advanced, upsert_credit_decision_case
 
 
