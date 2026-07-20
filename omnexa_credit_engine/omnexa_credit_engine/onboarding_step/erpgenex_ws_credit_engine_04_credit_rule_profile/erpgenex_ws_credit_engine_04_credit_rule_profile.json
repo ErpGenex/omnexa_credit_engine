@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create",
+ "creation": "2026-06-13 03:17:05.795798",
+ "description": "Create or review your first **Credit Rule Profile** record from this workspace.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-07-11 14:37:23.501736",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-credit_engine-04-credit_rule_profile",
+ "owner": "Administrator",
+ "reference_document": "Credit Rule Profile",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Get started with Credit Rule Profile",
+ "validate_action": 1
+}

@@ -1,0 +1,23 @@
+{
+ "action": "Go to Page",
+ "action_label": "Open",
+ "callback_message": "Use the journey sidebar and work scenarios on this page, then click Continue.",
+ "callback_title": "Servicing Portal",
+ "creation": "2026-06-13 03:17:05.788278",
+ "description": "Jump to the **Servicing Portal** page.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-07-11 14:37:23.487001",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-credit_engine-02-page-ce_servicing_portal",
+ "owner": "Administrator",
+ "path": "ce-servicing-portal",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Open Servicing Portal",
+ "validate_action": 1
+}

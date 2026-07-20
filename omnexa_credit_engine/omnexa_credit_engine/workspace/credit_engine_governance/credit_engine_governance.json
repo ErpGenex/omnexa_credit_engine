@@ -1,0 +1,96 @@
+{
+ "charts": [
+  {
+   "chart_name": "CreditEngineGovern · Status Bar",
+   "label": "Status Bar"
+  },
+  {
+   "chart_name": "CreditEngineGovern · Credit Policy Version Mix",
+   "label": "Credit Policy Version Mix"
+  }
+ ],
+ "content": "[{\"id\": \"erpgenex-onboarding\", \"type\": \"onboarding\", \"data\": {\"onboarding_name\": \"ERPGENEX — Credit Engine Governance\", \"col\": 12}}, {\"id\": \"credit-engine-governance-h\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Credit Engine Governance</b></span>\", \"col\": 12}}, {\"id\": \"credit-engine-governance-nc0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Policy Versions\", \"col\": 4}}, {\"id\": \"credit-engine-governance-nc1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Audit Snapshots\", \"col\": 4}}, {\"id\": \"credit-engine-governance-ch0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Status Bar\", \"col\": 4}}, {\"id\": \"credit-engine-governance-ch1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Policy Version Mix\", \"col\": 4}}, {\"id\": \"credit-engine-governance-ops\", \"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"id\": \"credit-engine-governance-sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Policy Versions\", \"col\": 3}}, {\"id\": \"credit-engine-governance-sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Snapshots\", \"col\": 3}}]",
+ "creation": "2026-04-17 15:39:31.188951",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "retail",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 1,
+ "label": "Credit Engine Governance",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Governance",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break",
+   "icon": "shield"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Policy Versions",
+   "link_count": 0,
+   "link_to": "Credit Policy Version",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "icon": "file-text"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Snapshots",
+   "link_count": 0,
+   "link_to": "Credit Audit Snapshot",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link",
+   "icon": "activity"
+  }
+ ],
+ "modified": "2026-04-17 23:45:47.760912",
+ "modified_by": "Administrator",
+ "module": "Omnexa Credit Engine",
+ "name": "Credit Engine Governance",
+ "number_cards": [
+  {
+   "label": "Policy Versions",
+   "number_card_name": "Policy Versions-2"
+  },
+  {
+   "label": "Audit Snapshots",
+   "number_card_name": "Audit Snapshots-2"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Finance Group",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Policy Versions",
+   "link_to": "Credit Policy Version",
+   "type": "DocType",
+   "icon": "file-text"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Audit Snapshots",
+   "link_to": "Credit Audit Snapshot",
+   "type": "DocType",
+   "icon": "activity"
+  }
+ ],
+ "title": "Credit Engine Governance"
+}

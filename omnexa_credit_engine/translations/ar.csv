@@ -1,0 +1,176 @@
+Active Rule Profiles,نشط Rule Profiles
+Active Scorecards,نشط Scorecards
+Active Strategies,نشط Strategies
+Actor,Actor
+Address,العنوان
+Amended From,Amended From
+Analytics Reports,تقارير التحليلات
+App,App
+Approve,Approve
+Approved,معتمد
+Approved At,معتمد At
+Approved By,معتمد حسب
+Approved Limit,معتمد Limit
+Approved On,معتمد On
+Audit Snapshots,تدقيق Snapshots
+Avg DTI,متوسط DTI
+Avg Latency (ms),متوسط Latency (ms)
+Avg LTV,متوسط LTV
+Avg Score,متوسط درجة
+Bank Account,بنك حساب
+Cases,حالات
+Challenger Strategy Tree JSON,Challenger Strategy Tree JSON
+Challenger Traffic %,Challenger Traffic%
+Champion Strategy Tree JSON,Champion Strategy Tree JSON
+Channel,Channel
+Checker,Checker
+Checker must differ from maker,Checker must differ from maker
+Checker On,Checker On
+Compliance Tags JSON,امتثال Tags JSON
+Connector Kind,Connector Kind
+Connector outcomes Perc,Connector outcomes Perc
+Connector Requests,Connector طلبات
+Contact,جهة الاتصال
+"Contracting, Disbursement & Servicing","Contracting, Disbursement & Servicing"
+Cost Center,مركز التكلفة
+Count,عدد
+Country,Country
+Country Code,Country كود
+Country Product Heatmap,Country منتج Heatmap
+Country Product Segment Heatmap,Country منتج Segment Heatmap
+Created At,Created At
+Credit Audit Snapshot,ائتمان تدقيق لقطة
+Credit Connector Request,ائتمان Connector طلب
+Credit Connector Request Trend,ائتمان Connector طلب اتجاه
+Credit Decision Case,ائتمان قرار حالة
+Credit Decision Case Trend,ائتمان قرار حالة اتجاه
+Credit Decision Case Vol,ائتمان قرار حالة Vol
+Credit Decision Override,ائتمان قرار Override
+Credit Engine,ائتمان محرك
+Credit Engine Governance,ائتمان محرك حوكمة
+Credit Policy Version,ائتمان سياسة إصدار
+Credit Policy Version Mix,ائتمان سياسة إصدار Mix
+Credit Rule Profile,ائتمان Rule ملف
+Credit Rule Profile Mix,ائتمان Rule ملف Mix
+Credit Scorecard,ائتمان Scorecard
+Credit Scorecard Mix,ائتمان Scorecard Mix
+Credit Strategy Route,ائتمان Strategy Route
+Currency Exchange Rate,Currency Exchange معدل
+Current Exposure,Current Exposure
+Customer & KYC,العميل والتحقق من الهوية (KYC)
+Customer Name,عميل اسم
+Customer Profile,ملف العميل
+Customer Segment,عميل Segment
+Decision,القرار
+Decision Case,قرار حالة
+Decision Cases,قرار حالات
+Decision funnel Bar,قرار funnel Bar
+Decision Matrix Path,قرار مصفوفة Path
+Decision Outcome Distribution,قرار Outcome Distribution
+Decision Overrides,قرار Overrides
+Decision Owner,قرار Owner
+Decision SLA Monitor,قرار SLA مراقبة
+Decision Status,قرار حالة
+Decline,Decline
+Definition JSON,Definition JSON
+Details,التفاصيل
+DTI,DTI
+Effective From,Effective From
+Explainability Store JSON,Explainability Store JSON
+External Reference,External Reference
+Fiscal Year,Fiscal Year
+General Ledger,عام دفتر أستاذ
+Governance,حوكمة
+Governance Overview,حوكمة نظرة عامة
+Idempotency Key,Idempotency مفتاح
+Inputs JSON,Inputs JSON
+inputs/outputs must be JSON objects,inputs outputs must be JSON objects
+Integration Payload JSON,تكامل Payload JSON
+Invalid scorecard status,Invalid scorecard حالة
+Journal Entry,قيد يومية
+Last Error,Last خطأ
+Latency (ms),Latency (ms)
+LTV,LTV
+Maker,Maker
+Maker and checker must be different users.,Maker و checker must be different users.
+Maker On,Maker On
+Max Latency (ms),أقصى Latency (ms)
+Maximum DTI,Maximum DTI
+Maximum Exposure,Maximum Exposure
+Maximum LTV,Maximum LTV
+Minimum Score,Minimum درجة
+Mode of Payment,طريقة الدفع
+No pending scorecard status,No معلق scorecard حالة
+Omnexa Credit Engine,Omnexa ائتمان محرك
+Original Decision,Original قرار
+Origination & Product Setup,Origination & منتج إعداد
+Outputs JSON,Outputs JSON
+Override is not pending,Override is not معلق
+Override Reason,Override Reason
+Override Reference,Override Reference
+Overview,نظرة عامة
+Payload JSON,Payload JSON
+payload must be a JSON object,payload must be a JSON object
+Payment Entry,دفعة قيد
+Pending,قيد الانتظار
+Pending Connectors,معلق Connectors
+Pending Overrides,معلق Overrides
+Pending Status,معلق حالة
+Policies Total,Policies إجمالي
+Policy Name,سياسة اسم
+Policy Ref,سياسة Ref
+Policy Reference,سياسة Reference
+Policy Version,سياسة إصدار
+Policy version already exists.,سياسة إصدار already exists.
+Policy version not found.,سياسة إصدار not found.
+Policy Versions,سياسة Versions
+Portfolio,Portfolio
+Portfolio Name,Portfolio اسم
+Process Name,Process اسم
+Product,منتج
+Product Code,منتج كود
+Profile Name,ملف اسم
+Proposed Decision,Proposed قرار
+Reason Code,Reason كود
+Reason Code Distribution,Reason كود Distribution
+Reason Codes JSON,Reason Codes JSON
+Rejected,مرفوض
+Rejected At,مرفوض At
+Rejection Reason,Rejection Reason
+Rejector,Rejector
+Request Amount,طلب مبلغ
+Request Owner,طلب Owner
+Request Payload,طلب Payload
+Response Payload,Response Payload
+Retry Count,Retry عدد
+Review,Review
+Risk Appetite Level,مخاطر Appetite Level
+Risk Grade,مخاطر Grade
+Risk grades Pie,مخاطر grades Pie
+"Risk, Governance & Compliance","مخاطر, حوكمة & امتثال"
+Route Reference,Route Reference
+Rule Owner,Rule Owner
+Rule Profiles,Rule Profiles
+Sales Invoice,فاتورة بيع
+Score,درجة
+Scorecard Code,Scorecard كود
+Scorecard Owner,Scorecard Owner
+Scorecard Version,Scorecard إصدار
+Scorecards,Scorecards
+Segment,Segment
+SLA Breaches (>200ms),SLA Breaches (> 200ms)
+SLA Due,SLA استحقاق
+Snapshot Hash,لقطة Hash
+Snapshot Reference,لقطة Reference
+Status,الحالة
+Status Bar,حالة Bar
+Strategy Code,Strategy كود
+Strategy route must be ACTIVE,Strategy route must be نشط
+Strategy Routes,Strategy Routes
+Submitted By,Submitted حسب
+Submitted On,Submitted On
+Title,العنوان
+Total,الإجمالي
+Trial Balance,Trial رصيد
+Workflow Status,سير العمل حالة
+You do not have checker approval role.,You do not have checker موافقة دور.

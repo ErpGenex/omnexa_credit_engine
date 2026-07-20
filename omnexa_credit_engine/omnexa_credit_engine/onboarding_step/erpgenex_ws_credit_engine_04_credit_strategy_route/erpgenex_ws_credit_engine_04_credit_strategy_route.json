@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create",
+ "creation": "2026-04-20 00:31:40.189188",
+ "description": "Create or review your first **Credit Strategy Route** record from this workspace.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-04-22 16:43:23.755386",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-credit_engine-04-credit_strategy_route",
+ "owner": "Administrator",
+ "reference_document": "Credit Strategy Route",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Get started with Credit Strategy Route",
+ "validate_action": 1
+}

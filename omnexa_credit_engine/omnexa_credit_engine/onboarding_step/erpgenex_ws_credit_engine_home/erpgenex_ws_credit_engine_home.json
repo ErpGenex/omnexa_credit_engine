@@ -1,0 +1,21 @@
+{
+ "action": "Go to Page",
+ "action_label": "Open workspace",
+ "creation": "2026-04-20 00:31:40.191518",
+ "description": "Return here for shortcuts, charts, and lists for **Credit Engine**.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-07-11 14:37:23.508872",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-credit_engine-home",
+ "owner": "Administrator",
+ "path": "Workspaces/Credit Engine",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Explore this workspace",
+ "validate_action": 1
+}
