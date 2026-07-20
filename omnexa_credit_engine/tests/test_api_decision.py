@@ -26,7 +26,8 @@ class TestDecisionApi(FrappeTestCase):
 		profile = frappe.get_doc(
 			{
 				"doctype": "Credit Rule Profile",
-				"profile_name": f"Retail-EG-{frappe.generate_hash(length=6)}",
+				"profile_name": f"Retail-EG-{frappe.generate_hash(length=6)
+	}",
 				"status": "ACTIVE",
 				"country_code": "EG",
 				"product_code": "VEHICLE",
@@ -36,8 +37,8 @@ class TestDecisionApi(FrappeTestCase):
 				"max_dti": 0.45,
 				"max_ltv": 0.85,
 				"max_exposure": 750000,
-				"risk_appetite_level": "BALANCED",
-			}
+				"risk_appetite_level": "BALANCED"
+	}
 		)
 		profile.insert(ignore_permissions=True)
 

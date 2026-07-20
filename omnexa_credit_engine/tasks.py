@@ -9,4 +9,5 @@ from frappe.utils import today
 
 def process_daily_portfolio_snapshots():
 	"""Finance vertical scheduler hook — portfolio health refresh marker."""
-	frappe.publish_realtime("finance_portfolio_tick", {"date": today()}, user=frappe.session.user)
+	frappe.publish_realtime("finance_portfolio_tick", {"date": today()
+	}, user=frappe.session.user)

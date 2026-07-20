@@ -12,5 +12,5 @@ def get_standards_profile() -> dict:
 		"activity_controls": ['scoring-governance', 'policy-rules', 'underwriting-audit', 'exposure-limits'],
 		"multi_country_ready": True,
 		"auditability": "high",
-		"api_contract_version": "v1",
+		"api_contract_version": "v1"
 	}

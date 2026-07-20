@@ -60,8 +60,8 @@ def _resolve_credit_policy(country_code: str, product_code: str, customer_segmen
 			"status": "ACTIVE",
 			"country_code": country_code,
 			"product_code": product_code,
-			"customer_segment": customer_segment,
-		},
+			"customer_segment": customer_segment
+	},
 	)
 	if not profile_name:
 		return CreditPolicy(), "default_policy_fallback"
@@ -85,13 +85,12 @@ def _integration_payload(decision_out: dict, product_code: str, country_code: st
 			"approved_limit": decision_out["approved_limit"],
 			"pricing_risk_grade": decision_out["risk_grade"],
 			"product_code": product_code,
-			"country_code": country_code,
-		},
+			"country_code": country_code
+	},
 		"credit_risk": {
 			"risk_grade": decision_out["risk_grade"],
 			"stage_hint": "STAGE_2" if decision_out["decision"] == "REVIEW" else "STAGE_1",
-			"reason_codes": decision_out.get("reason_codes", []),
-		},
+			"reason_codes": decision_out.get("reason_codes", [])},
 	}
 
 
@@ -188,7 +187,8 @@ def upsert_credit_decision_case(
 	doc.compliance_tags_json = json.dumps(decision_out.get("compliance_tags", []), sort_keys=True)
 	doc.integration_payload_json = json.dumps(decision_out.get("integration", {}), sort_keys=True)
 	doc.save(ignore_permissions=True)
-	return {"case_id": doc.name, "decision": decision_out}
+	return {"case_id": doc.name, "decision": decision_out
+	}
 
 
 @frappe.whitelist()
@@ -264,7 +264,8 @@ def upsert_credit_scorecard(
 	doc.product_code = product_code
 	doc.channel = channel
 	doc.save(ignore_permissions=True)
-	return {"scorecard_code": scorecard_code, "name": doc.name}
+	return {"scorecard_code": scorecard_code, "name": doc.name
+	}
 
 
 @frappe.whitelist()
@@ -281,7 +282,8 @@ def submit_credit_scorecard_status_change(scorecard_code: str, proposed_status: 
 	doc.status_approved_by = None
 	doc.status_approved_on = None
 	doc.save(ignore_permissions=True)
-	return {"scorecard_code": scorecard_code, "pending_status": proposed_status}
+	return {"scorecard_code": scorecard_code, "pending_status": proposed_status
+	}
 
 
 @frappe.whitelist()
@@ -298,7 +300,8 @@ def approve_credit_scorecard_status_change(scorecard_code: str) -> dict:
 	doc.status_approved_by = frappe.session.user
 	doc.status_approved_on = now_datetime()
 	doc.save(ignore_permissions=True)
-	return {"scorecard_code": scorecard_code, "status": doc.status}
+	return {"scorecard_code": scorecard_code, "status": doc.status
+	}
 
 
 @frappe.whitelist()
@@ -323,7 +326,8 @@ def upsert_credit_strategy_route(
 	doc.country_code = country_code
 	doc.product_code = product_code
 	doc.save(ignore_permissions=True)
-	return {"strategy_code": strategy_code, "name": doc.name}
+	return {"strategy_code": strategy_code, "name": doc.name
+	}
 
 
 @frappe.whitelist()
@@ -341,15 +345,17 @@ def route_credit_decision_path(strategy_code: str, subject_key: str = "") -> dic
 		"strategy_code": strategy_code,
 		"arm": arm,
 		"traffic_split_percent": pct,
-		"determinism_bucket": bucket,
+		"determinism_bucket": bucket
 	}
 	store = json.loads(doc.explainability_store_json or "[]")
 	if not isinstance(store, list):
 		store = []
-	store.append({"subject_key": subject_key, "arm": arm, "bucket": bucket})
+	store.append({"subject_key": subject_key, "arm": arm, "bucket": bucket
+	})
 	doc.explainability_store_json = json.dumps(store[-500:], default=str)
 	doc.save(ignore_permissions=True)
-	return {"arm": arm, "explainability": explain}
+	return {"arm": arm, "explainability": explain
+	}
 
 
 @frappe.whitelist()
@@ -372,11 +378,12 @@ def submit_credit_decision_override(
 			"workflow_status": "PENDING",
 			"sla_due": add_to_date(now_datetime(), hours=int(sla_hours)),
 			"maker": frappe.session.user,
-			"maker_on": now_datetime(),
-		}
+			"maker_on": now_datetime()
+	}
 	)
 	doc.insert(ignore_permissions=True)
-	return {"name": doc.name, "workflow_status": doc.workflow_status}
+	return {"name": doc.name, "workflow_status": doc.workflow_status
+	}
 
 
 @frappe.whitelist()
@@ -395,30 +402,34 @@ def approve_credit_decision_override(override_name: str) -> dict:
 	case = frappe.get_doc("Credit Decision Case", doc.decision_case)
 	case.decision_status = doc.proposed_decision
 	case.save(ignore_permissions=True)
-	return {"name": override_name, "workflow_status": doc.workflow_status, "case": doc.decision_case}
+	return {"name": override_name, "workflow_status": doc.workflow_status, "case": doc.decision_case
+	}
 
 
 @frappe.whitelist()
 def enqueue_credit_connector_request(connector_kind: str, idempotency_key: str, request_payload: str) -> dict:
 	existing = frappe.db.get_value(
 		"Credit Connector Request",
-		{"connector_kind": connector_kind, "idempotency_key": idempotency_key},
+		{"connector_kind": connector_kind, "idempotency_key": idempotency_key
+	},
 		["name", "status"],
 		as_dict=True,
 	)
 	if existing:
-		return {"name": existing.name, "status": existing.status, "deduplicated": True}
+		return {"name": existing.name, "status": existing.status, "deduplicated": True
+	}
 	doc = frappe.get_doc(
 		{
 			"doctype": "Credit Connector Request",
 			"connector_kind": connector_kind,
 			"idempotency_key": idempotency_key,
 			"request_payload": request_payload,
-			"status": "PENDING",
-		}
+			"status": "PENDING"
+	}
 	)
 	doc.insert(ignore_permissions=True)
-	return {"name": doc.name, "status": doc.status, "deduplicated": False}
+	return {"name": doc.name, "status": doc.status, "deduplicated": False
+	}
 
 
 @frappe.whitelist()
@@ -428,16 +439,19 @@ def retry_credit_connector_request(name: str) -> dict:
 	doc.status = "PENDING"
 	doc.last_error = None
 	doc.save(ignore_permissions=True)
-	return {"name": name, "retry_count": doc.retry_count}
+	return {"name": name, "retry_count": doc.retry_count
+	}
 
 
 @frappe.whitelist()
 def complete_credit_connector_request_stub(name: str, success: int = 1) -> dict:
 	doc = frappe.get_doc("Credit Connector Request", name)
 	doc.status = "SUCCESS" if int(success) else "FAILED"
-	doc.response_payload = json.dumps({"ok": bool(int(success)), "stub": True}, sort_keys=True)
+	doc.response_payload = json.dumps({"ok": bool(int(success)), "stub": True
+	}, sort_keys=True)
 	doc.save(ignore_permissions=True)
-	return {"name": name, "status": doc.status}
+	return {"name": name, "status": doc.status
+	}
 
 
 @frappe.whitelist()
@@ -452,8 +466,7 @@ def get_regulatory_dashboard() -> dict:
 		"standards": std.get("standards", []),
 		"activity_controls": std.get("activity_controls", []),
 		"governance": gov,
-		"compliance_score": _compute_compliance_score(std=std, gov=gov),
-	}
+		"compliance_score": _compute_compliance_score(std=std, gov=gov)}
 
 
 def _compute_compliance_score(std: dict, gov: dict) -> int:

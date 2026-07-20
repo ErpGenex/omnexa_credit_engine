@@ -49,8 +49,8 @@ def _ensure_chart(name: str, chart_type: str, document_type: str, chart_render_t
 			"timespan": "Last Month",
 			"time_interval": "Daily",
 			"filters_json": "[]",
-			"type": chart_render_type,
-		}
+			"type": chart_render_type
+	}
 	)
 	doc.insert(ignore_permissions=True)
 
@@ -64,33 +64,42 @@ def _ensure_workspace():
 			ws = None
 	if not ws:
 		ws = frappe.new_doc("Workspace")
-		ws.update({"label": WORKSPACE, "title": WORKSPACE, "name": WORKSPACE, "module": MODULE, "public": 1, "icon": ICON})
+		ws.update({"label": WORKSPACE, "title": WORKSPACE, "name": WORKSPACE, "module": MODULE, "public": 1, "icon": ICON
+	})
 		ws.insert(ignore_permissions=True)
 
 	ws.icon = ICON
 	ws.module = MODULE
 	ws.public = 1
 	ws.content = json.dumps([
-		{"id": "omnexa_credit_engine-h", "type": "header", "data": {"text": "<span class=\"h4\"><b>Credit Engine Governance</b></span>", "col": 12}},
-		{"id": "omnexa_credit_engine-c1", "type": "card", "data": {"card_name": "Governance", "col": 4}},
-		{"id": "omnexa_credit_engine-ch1", "type": "chart", "data": {"chart_name": CHART_POL, "col": 4}},
-		{"id": "omnexa_credit_engine-ch2", "type": "chart", "data": {"chart_name": CHART_SNP, "col": 4}},
+		{"id": "omnexa_credit_engine-h", "type": "header", "data": {"text": "<span class=\"h4\"><b>Credit Engine Governance</b></span>", "col": 12}
+	},
+		{"id": "omnexa_credit_engine-c1", "type": "card", "data": {"card_name": "Governance", "col": 4}
+	},
+		{"id": "omnexa_credit_engine-ch1", "type": "chart", "data": {"chart_name": CHART_POL, "col": 4}
+	},
+		{"id": "omnexa_credit_engine-ch2", "type": "chart", "data": {"chart_name": CHART_SNP, "col": 4}
+	},
 	])
 
 	if not ws.get("links"):
 		ws.set("links", [])
 	if not any((l.get("type") == "Card Break" and l.get("label") == "Governance") for l in ws.links):
-		ws.append("links", {"type": "Card Break", "label": "Governance", "hidden": 0})
+		ws.append("links", {"type": "Card Break", "label": "Governance", "hidden": 0
+	})
 	for lb, lt in (("Policy Versions", POLICY_DTYPE), ("Audit Snapshots", SNAP_DTYPE)):
 		if not any((l.get("type") == "Link" and l.get("link_to") == lt) for l in ws.links):
-			ws.append("links", {"type": "Link", "label": lb, "link_type": "DocType", "link_to": lt, "hidden": 0})
+			ws.append("links", {"type": "Link", "label": lb, "link_type": "DocType", "link_to": lt, "hidden": 0
+	})
 
 	if not ws.get("charts"):
 		ws.set("charts", [])
 	if not any(c.get("chart_name") == CHART_POL for c in ws.charts):
-		ws.append("charts", {"chart_name": CHART_POL, "label": "Policies by Status"})
+		ws.append("charts", {"chart_name": CHART_POL, "label": "Policies by Status"
+	})
 	if not any(c.get("chart_name") == CHART_SNP for c in ws.charts):
-		ws.append("charts", {"chart_name": CHART_SNP, "label": "Snapshots (Last Month)"})
+		ws.append("charts", {"chart_name": CHART_SNP, "label": "Snapshots (Last Month)"
+	})
 
 	prune_workspace_stale_links(ws)
 	ws.save(ignore_permissions=True)

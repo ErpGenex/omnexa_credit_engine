@@ -19,25 +19,33 @@ def execute(filters=None):
 	filters = prepare_filters(filters)
 	extra = policy_version_filters(filters)
 	columns = [
-		{"label": _("App"), "fieldname": "app", "fieldtype": "Data", "width": 180},
-		{"label": _("Policies Total"), "fieldname": "policies_total", "fieldtype": "Int", "width": 120},
-		{"label": _("Pending"), "fieldname": "pending", "fieldtype": "Int", "width": 90},
-		{"label": _("Approved"), "fieldname": "approved", "fieldtype": "Int", "width": 90},
-		{"label": _("Rejected"), "fieldname": "rejected", "fieldtype": "Int", "width": 90},
+		{"label": _("App"), "fieldname": "app", "fieldtype": "Data", "width": 180
+	},
+		{"label": _("Policies Total"), "fieldname": "policies_total", "fieldtype": "Int", "width": 120
+	},
+		{"label": _("Pending"), "fieldname": "pending", "fieldtype": "Int", "width": 90
+	},
+		{"label": _("Approved"), "fieldname": "approved", "fieldtype": "Int", "width": 90
+	},
+		{"label": _("Rejected"), "fieldname": "rejected", "fieldtype": "Int", "width": 90
+	},
 	]
 	snaps = 0
 
 	base = extra or {}
 	pol_total = frappe.db.count("Credit Policy Version", base or None)
-	pending = frappe.db.count("Credit Policy Version", {**base, "status": "PENDING_APPROVAL"})
-	approved = frappe.db.count("Credit Policy Version", {**base, "status": "APPROVED"})
-	rejected = frappe.db.count("Credit Policy Version", {**base, "status": "REJECTED"})
+	pending = frappe.db.count("Credit Policy Version", {**base, "status": "PENDING_APPROVAL"
+	})
+	approved = frappe.db.count("Credit Policy Version", {**base, "status": "APPROVED"
+	})
+	rejected = frappe.db.count("Credit Policy Version", {**base, "status": "REJECTED"
+	})
 	row = {
 		"app": "omnexa_credit_engine",
 		"policies_total": pol_total,
 		"pending": pending,
 		"approved": approved,
-		"rejected": rejected,
+		"rejected": rejected
 	}
 	if snaps:
 		row["snapshots"] = snaps

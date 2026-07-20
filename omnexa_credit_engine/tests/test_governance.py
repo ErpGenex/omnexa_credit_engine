@@ -17,7 +17,8 @@ class TestCreditEngineGovernance(FrappeTestCase):
 			"omnexa_credit_engine",
 			policy_name="pricing_policy",
 			version=version,
-			payload={"spread_floor": 0.02},
+			payload={"spread_floor": 0.02
+	},
 			effective_from="2026-01-01",
 		)
 		pols = list_policy_versions("omnexa_credit_engine", policy_name="pricing_policy")
@@ -27,8 +28,10 @@ class TestCreditEngineGovernance(FrappeTestCase):
 		create_audit_snapshot(
 			"omnexa_credit_engine",
 			process_name="decision_preview",
-			inputs={"score": 700},
-			outputs={"decision": "APPROVE"},
+			inputs={"score": 700
+	},
+			outputs={"decision": "APPROVE"
+	},
 			policy_ref="pricing_policy:v-test-1",
 		)
 		snaps = list_audit_snapshots("omnexa_credit_engine", process_name="decision_preview", limit=10)

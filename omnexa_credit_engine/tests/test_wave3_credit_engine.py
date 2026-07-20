@@ -33,10 +33,11 @@ class TestCreditEngineWave3(FrappeTestCase):
 				"email": email,
 				"first_name": "Checker",
 				"send_welcome_email": 0,
-				"enabled": 1,
-			}
+				"enabled": 1
+	}
 		)
-		doc.append("roles", {"role": "System Manager"})
+		doc.append("roles", {"role": "System Manager"
+	})
 		doc.insert(ignore_permissions=True)
 
 	def test_scorecard_strategy_connector_and_override(self):
@@ -61,8 +62,10 @@ class TestCreditEngineWave3(FrappeTestCase):
 		upsert_credit_strategy_route(
 			strategy_code=sid,
 			title="Champion/Challenger test",
-			champion_tree_json=json.dumps({"id": "champion_root", "edges": []}),
-			challenger_tree_json=json.dumps({"id": "challenger_root", "edges": []}),
+			champion_tree_json=json.dumps({"id": "champion_root", "edges": []
+	}),
+			challenger_tree_json=json.dumps({"id": "challenger_root", "edges": []
+	}),
 			traffic_split_percent="25",
 			country_code="EG",
 			product_code="PL",
@@ -85,7 +88,8 @@ class TestCreditEngineWave3(FrappeTestCase):
 		case = upsert_credit_decision_case(customer_name="Override Customer", score=700, dti="0.2", ltv="0.5", request_amount="10000")
 		cid = case["case_id"]
 		submit_credit_decision_override(cid, "DECLINE", "manual review decline", sla_hours=12)
-		ov = frappe.get_all("Credit Decision Override", filters={"decision_case": cid}, pluck="name", limit=1)
+		ov = frappe.get_all("Credit Decision Override", filters={"decision_case": cid
+	}, pluck="name", limit=1)
 		self.assertTrue(ov)
 		frappe.set_user("checker_wave3_credit@example.com")
 		approve_credit_decision_override(ov[0])

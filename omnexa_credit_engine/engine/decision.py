@@ -134,33 +134,32 @@ def _build_reason_codes(reasons: list[str]) -> list[dict]:
 		"score_below_policy": {
 			"code": "CRD-SCORE-001",
 			"severity": "high",
-			"title": "Score Below Minimum",
-		},
+			"title": "Score Below Minimum"
+	},
 		"dti_above_policy": {
 			"code": "CRD-DTI-002",
 			"severity": "medium",
-			"title": "DTI Above Threshold",
-		},
+			"title": "DTI Above Threshold"
+	},
 		"ltv_above_policy": {
 			"code": "CRD-LTV-003",
 			"severity": "medium",
-			"title": "LTV Above Threshold",
-		},
+			"title": "LTV Above Threshold"
+	},
 		"exposure_limit_breach": {
 			"code": "CRD-EXP-004",
 			"severity": "high",
-			"title": "Exposure Limit Breach",
-		},
+			"title": "Exposure Limit Breach"
+	},
 		"ml_score_low": {
 			"code": "CRD-ML-005",
 			"severity": "medium",
-			"title": "Model Score Below Cutoff",
-		},
+			"title": "Model Score Below Cutoff"
+	},
 		"ml_low_confidence": {
 			"code": "CRD-ML-006",
 			"severity": "medium",
-			"title": "Model Confidence Low",
-		},
+			"title": "Model Confidence Low"}
 	}
 	return [catalog[r] for r in reasons if r in catalog]
 

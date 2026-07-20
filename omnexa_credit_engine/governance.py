@@ -83,14 +83,14 @@ def _policy_doc_to_dict(doc) -> dict:
 		"created_at": getattr(doc, "created_at", None),
 		"approved_at": getattr(doc, "approved_at", None),
 		"rejected_at": getattr(doc, "rejected_at", None),
-		"rejection_reason": getattr(doc, "rejection_reason", None),
-	}
+		"rejection_reason": getattr(doc, "rejection_reason", None)}
 
 
 def submit_policy_version(app: str, policy_name: str, version: str, payload: dict, effective_from: str | None = None) -> dict:
 	if _has_doctype_backend(app):
 		dt = _policy_doctype(app)
-		exists = frappe.db.exists(dt, {"policy_name": policy_name, "policy_version": version})
+		exists = frappe.db.exists(dt, {"policy_name": policy_name, "policy_version": version
+	})
 		if exists:
 			frappe.throw(frappe._("Policy version already exists."))
 		doc = frappe.get_doc(
@@ -102,8 +102,8 @@ def submit_policy_version(app: str, policy_name: str, version: str, payload: dic
 				"effective_from": effective_from,
 				"status": "PENDING_APPROVAL",
 				"maker": frappe.session.user,
-				"created_at": _nowts(),
-			}
+				"created_at": _nowts()
+	}
 		)
 		doc.insert(ignore_permissions=True)
 		return _policy_doc_to_dict(doc)
@@ -124,7 +124,7 @@ def submit_policy_version(app: str, policy_name: str, version: str, payload: dic
 		"created_at": now,
 		"approved_at": None,
 		"rejected_at": None,
-		"rejection_reason": None,
+		"rejection_reason": None
 	}
 	rows.append(entry)
 	_save_json_default(_policy_key(app), rows)
@@ -135,7 +135,8 @@ def approve_policy_version(app: str, policy_name: str, version: str) -> dict:
 	_require_checker_role()
 	if _has_doctype_backend(app):
 		dt = _policy_doctype(app)
-		name = frappe.db.exists(dt, {"policy_name": policy_name, "policy_version": version})
+		name = frappe.db.exists(dt, {"policy_name": policy_name, "policy_version": version
+	})
 		if not name:
 			frappe.throw(frappe._("Policy version not found."))
 		doc = frappe.get_doc(dt, name)
@@ -168,7 +169,8 @@ def reject_policy_version(app: str, policy_name: str, version: str, reason: str 
 	_require_checker_role()
 	if _has_doctype_backend(app):
 		dt = _policy_doctype(app)
-		name = frappe.db.exists(dt, {"policy_name": policy_name, "policy_version": version})
+		name = frappe.db.exists(dt, {"policy_name": policy_name, "policy_version": version
+	})
 		if not name:
 			frappe.throw(frappe._("Policy version not found."))
 		doc = frappe.get_doc(dt, name)
@@ -217,8 +219,8 @@ def create_audit_snapshot(app: str, process_name: str, inputs: dict, outputs: di
 			"outputs": outputs,
 			"policy_ref": policy_ref,
 			"actor": frappe.session.user,
-			"created_at": now,
-		}
+			"created_at": now
+	}
 		serial = json.dumps(payload, separators=(",", ":"), sort_keys=True)
 		snapshot_hash = hashlib.sha256(serial.encode("utf-8")).hexdigest()
 		doc = frappe.get_doc(
@@ -230,8 +232,8 @@ def create_audit_snapshot(app: str, process_name: str, inputs: dict, outputs: di
 				"outputs_json": json.dumps(outputs, separators=(",", ":"), sort_keys=True),
 				"snapshot_hash": snapshot_hash,
 				"actor": frappe.session.user,
-				"created_at": now,
-			}
+				"created_at": now
+	}
 		)
 		doc.insert(ignore_permissions=True)
 		payload["snapshot_hash"] = snapshot_hash
@@ -245,7 +247,7 @@ def create_audit_snapshot(app: str, process_name: str, inputs: dict, outputs: di
 		"outputs": outputs,
 		"policy_ref": policy_ref,
 		"actor": frappe.session.user,
-		"created_at": now,
+		"created_at": now
 	}
 	serial = json.dumps(payload, separators=(",", ":"), sort_keys=True)
 	payload["snapshot_hash"] = hashlib.sha256(serial.encode("utf-8")).hexdigest()
@@ -275,8 +277,8 @@ def list_audit_snapshots(app: str, process_name: str | None = None, limit: int =
 				"outputs": _parse_json(r.outputs_json),
 				"snapshot_hash": r.snapshot_hash,
 				"actor": r.actor,
-				"created_at": r.created_at,
-			})
+				"created_at": r.created_at
+	})
 		return out
 	rows = _load_json_default(_snapshot_key(app))
 	if process_name:
@@ -293,5 +295,5 @@ def governance_overview(app: str) -> dict:
 		"policies_pending": sum(1 for p in policies if p.get("status") == "PENDING_APPROVAL"),
 		"policies_approved": sum(1 for p in policies if p.get("status") == "APPROVED"),
 		"policies_rejected": sum(1 for p in policies if p.get("status") == "REJECTED"),
-		"snapshots_total": len(snaps),
+		"snapshots_total": len(snaps)
 	}

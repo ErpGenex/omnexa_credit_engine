@@ -17,11 +17,16 @@ from omnexa_core.omnexa_core.report_print.report_query_filters import (
 
 def execute(filters=None):
 	columns = [
-		{"label": _("Decision"), "fieldname": "decision_status", "fieldtype": "Data", "width": 130},
-		{"label": _("Cases"), "fieldname": "cases", "fieldtype": "Int", "width": 100},
-		{"label": _("Avg Latency (ms)"), "fieldname": "avg_latency_ms", "fieldtype": "Float", "width": 140},
-		{"label": _("Max Latency (ms)"), "fieldname": "max_latency_ms", "fieldtype": "Int", "width": 140},
-		{"label": _("SLA Breaches (>200ms)"), "fieldname": "sla_breaches", "fieldtype": "Int", "width": 170},
+		{"label": _("Decision"), "fieldname": "decision_status", "fieldtype": "Data", "width": 130
+	},
+		{"label": _("Cases"), "fieldname": "cases", "fieldtype": "Int", "width": 100
+	},
+		{"label": _("Avg Latency (ms)"), "fieldname": "avg_latency_ms", "fieldtype": "Float", "width": 140
+	},
+		{"label": _("Max Latency (ms)"), "fieldname": "max_latency_ms", "fieldtype": "Int", "width": 140
+	},
+		{"label": _("SLA Breaches (>200ms)"), "fieldname": "sla_breaches", "fieldtype": "Int", "width": 170
+	},
 	]
 	filters = prepare_filters(filters)
 	conditions, params = sql_conditions(filters, "Credit Decision Case", date_field="creation", company=True, branch=True)

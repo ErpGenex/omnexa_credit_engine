@@ -16,7 +16,7 @@ add_to_apps_screen = [
 		"logo": "/assets/omnexa_credit_engine/logo.png",
 		"title": "CreditPulse",
 		"route": "/app/ce-servicing-portal",
-		"has_permission": "omnexa_core.omnexa_core.finance_demo.finance_app_permission.has_app_permission",
+		"has_permission": "omnexa_core.omnexa_core.finance_demo.finance_app_permission.has_app_permission"
 	}
 ]
 
@@ -209,22 +209,22 @@ before_request = ["omnexa_credit_engine.license_gate.before_request"]
 
 # user_data_fields = [
 # 	{
-# 		"doctype": "{doctype_1}",
-# 		"filter_by": "{filter_by}",
-# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"doctype": "{}",
+# 		"filter_by": "{}",
+# 		"redact_fields": ["{}", "{}"],
 # 		"partial": 1,
 # 	},
 # 	{
-# 		"doctype": "{doctype_2}",
-# 		"filter_by": "{filter_by}",
+# 		"doctype": "{}",
+# 		"filter_by": "{}",
 # 		"partial": 1,
 # 	},
 # 	{
-# 		"doctype": "{doctype_3}",
+# 		"doctype": "{}",
 # 		"strict": False,
 # 	},
 # 	{
-# 		"doctype": "{doctype_4}"
+# 		"doctype": "{}"
 # 	}
 # ]
 
@@ -255,10 +255,10 @@ after_migrate = [
 
 permission_query_conditions = {
 	"Credit Policy Version": "omnexa_credit_engine.governance_permissions.policy_query_conditions",
-	"Credit Audit Snapshot": "omnexa_credit_engine.governance_permissions.snapshot_query_conditions",
-}
+	"Credit Audit Snapshot": "omnexa_credit_engine.governance_permissions.snapshot_query_conditions"
+	}
 
 has_permission = {
 	"Credit Policy Version": "omnexa_credit_engine.governance_permissions.policy_has_permission",
-	"Credit Audit Snapshot": "omnexa_credit_engine.governance_permissions.snapshot_has_permission",
-}
+	"Credit Audit Snapshot": "omnexa_credit_engine.governance_permissions.snapshot_has_permission"
+	}

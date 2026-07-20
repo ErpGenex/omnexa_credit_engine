@@ -131,8 +131,8 @@ def _build_shortcuts(link_rows: list[dict]) -> list[dict]:
 				"label": row["label"],
 				"link_to": row["link_to"],
 				"type": row["link_type"],
-				"color": _SHORTCUT_COLORS[idx % len(_SHORTCUT_COLORS)],
-			}
+				"color": _SHORTCUT_COLORS[idx % len(_SHORTCUT_COLORS)]
+	}
 			if lt == "DocType":
 				entry["doc_view"] = "List"
 			if lt == "Report" and row.get("report_ref_doctype"):
@@ -159,74 +159,84 @@ def _build_content(link_rows: list[dict], ws) -> str:
 		{
 			"id": "ce-title",
 			"type": "header",
-			"data": {"text": '<span class="h4"><b>Credit Engine</b></span>', "col": 12},
-		}
+			"data": {"text": '<span class="h4"><b>Credit Engine</b></span>', "col": 12}
+	}
 	)
 	section_idx = 0
 	link_idx = 0
 	for row in link_rows:
 		if row.get("type") == "Card Break":
 			if section_idx:
-				content.append({"id": f"ce-sp-{section_idx}", "type": "spacer", "data": {"col": 12}})
+				content.append({"id": f"ce-sp-{section_idx
+	}", "type": "spacer", "data": {"col": 12}
+	})
 			content.append(
 				{
-					"id": f"ce-sec-{section_idx}",
+					"id": f"ce-sec-{section_idx
+	}",
 					"type": "header",
-					"data": {"text": f'<span class="h5"><b>{row["label"]}</b></span>', "col": 12},
-				}
+					"data": {"text": f'<span class="h5"><b>{row["label"]
+	}</b></span>', "col": 12}
+	}
 			)
 			section_idx += 1
 			continue
 		content.append(
 			{
-				"id": f"ce-lnk-{link_idx}",
+				"id": f"ce-lnk-{link_idx
+	}",
 				"type": "shortcut",
-				"data": {"shortcut_name": row["label"], "col": 4},
-			}
+				"data": {"shortcut_name": row["label"], "col": 4}
+	}
 		)
 		link_idx += 1
 
 	if ws.number_cards:
-		content.append({"id": "ce-kpi-sp", "type": "spacer", "data": {"col": 12}})
+		content.append({"id": "ce-kpi-sp", "type": "spacer", "data": {"col": 12}
+	})
 		content.append(
 			{
 				"id": "ce-kpi-h",
 				"type": "header",
-				"data": {"text": '<span class="h5"><b>📊 KPIs</b></span>', "col": 12},
-			}
+				"data": {"text": '<span class="h5"><b>📊 KPIs</b></span>', "col": 12}
+	}
 		)
 		for idx, nc in enumerate(ws.number_cards):
 			content.append(
 				{
-					"id": f"ce-nc-{idx}",
+					"id": f"ce-nc-{idx
+	}",
 					"type": "number_card",
-					"data": {"number_card_name": nc.number_card_name, "col": 4},
-				}
+					"data": {"number_card_name": nc.number_card_name, "col": 4}
+	}
 			)
 
 	if ws.charts:
-		content.append({"id": "ce-ch-sp", "type": "spacer", "data": {"col": 12}})
+		content.append({"id": "ce-ch-sp", "type": "spacer", "data": {"col": 12}
+	})
 		content.append(
 			{
 				"id": "ce-ch-h",
 				"type": "header",
-				"data": {"text": '<span class="h5"><b>📈 Charts</b></span>', "col": 12},
-			}
+				"data": {"text": '<span class="h5"><b>📈 Charts</b></span>', "col": 12}
+	}
 		)
 		for idx, ch in enumerate(ws.charts):
 			content.append(
 				{
-					"id": f"ce-ch-{idx}",
+					"id": f"ce-ch-{idx
+	}",
 					"type": "chart",
-					"data": {"chart_name": ch.label or ch.chart_name, "col": 4},
-				}
+					"data": {"chart_name": ch.label or ch.chart_name, "col": 4}
+	}
 			)
 
 	return json.dumps(content, separators=(",", ":"))
 
 
 def sync_ce_workspace_menu(*, save: bool = True, rebuild: bool = True) -> dict:
-	stats = {"sections": 0, "links": 0, "shortcuts": 0}
+	stats = {"sections": 0, "links": 0, "shortcuts": 0
+	}
 	if not frappe.db.exists("Workspace", WORKSPACE_NAME):
 		return stats
 	rows = _build_link_rows()
@@ -266,5 +276,5 @@ def get_workspace_coverage() -> dict:
 	link_rows = [r for r in rows if r.get("type") == "Link"]
 	return {
 		"sections": len([r for r in rows if r.get("type") == "Card Break"]),
-		"links_catalogued": len(link_rows),
+		"links_catalogued": len(link_rows)
 	}
